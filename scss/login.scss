@@ -1,0 +1,38 @@
+        #top{height:30px;background:#f4f4f6;border-bottom:1px solid #e2e2e2;padding:0 36px;position:relative;}
+		#top .t-l{float:left;}
+		#top .t-l a{float:left;display:block;width:100px;height:30px;border-left:1px solid #e2e2e2;border-right:1px solid #e2e2e2;font:12px/30px '';color:#726777;text-align:center;}
+		#top .t-l .a1{background:#fff;border-bottom:1px solid #fff;}
+	    #top .t-l .a2:hover{background:#fff;color:#de000b;border-bottom:1px solid #fff;}
+	    #top .t-l .img1{display:none;position:absolute;left:136px;top:30px;}
+
+
+		#top .t-r{float:right;font:12px/30px '';color:#726777;}
+		#top .t-r a{float:left;text-align:center;}
+		#top .t-r a:hover{color:#de000b;}
+		#top .t-r .a3{margin:0 10px;}
+	    #top .t-r .a5{display:block;width:60px;height:30px;}
+		#top .t-r .a5:hover{background:#fff;border-bottom:1px solid #fff;border-left:1px solid #e2e2e2;border-right:1px solid #e2e2e2;}
+		#top .t-r span{float:left;margin:0 10px;}
+		#top .t-r .notice{width:200px;height:150px;border:1px solid #e2e2e2;background:#fff;position:absolute;top:30px;right:0;display:none;}
+	    #top .t-r .notice a{display:block;width:200px;height:50px;font:12px/50px '';color:#de000b;}
+
+		#head{height:70px;padding:0 36px;overflow:hidden;}
+		#head img{float:left;margin:20px 20px;}
+		#head h3{float:left;width:132px;height:40px;font:18px/40px '';color:#666;border-left:1px solid #e2e2e2;text-align: center;margin:20px 30px;}
+        #main{width:380px;height:450px;border:1px solid #e2e2e2;margin:10px auto;overflow:hidden;}
+        #main .m-t{overflow:hidden;margin:25px 15px;}
+        #main .m-t a{float:left;display:block;width:175px;height:40px;background:#333;font:12px/40px '';color:#fff;text-align: center;}
+        #main .m-t a.active{background:#f3f3f3;color:#000;}
+        #main .m-c{}
+        #main .m-c input{display:block;width:310px;height:36px;margin:0 0 30px 30px;border:1px solid #e2e2e2;}
+        #main .m-c input.txt1{background:url(../images/l1.png) no-repeat left;text-indent: 75px;}
+        #main .m-c input.txt2{background:url(../images/l2.png) no-repeat left;text-indent: 75px;}
+        #main .m-c input.sub{font:600 16px/36px '';background:#000;color:#fff;}
+        #main .m-c a{margin-left:30px;font:12px/20px '';}
+        #main .m-b{text-align: center;font:12px/30px '';color:#666;}
+
+        #footer{padding:0 36px;height:106px;background:#000;overflow:hidden;}
+        #footer .f-l{float:left;margin-top:30px;}
+	    #footer .f-r{float:right;font:12px/26px '';color:#fff;}
+	    #footer .f-r .a{margin-left:660px;} 
+	    #footer .f-r .img{margin-left:580px;} 

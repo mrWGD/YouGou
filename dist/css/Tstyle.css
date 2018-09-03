@@ -1,0 +1,65 @@
+@charset "UTF-8";
+body, ol, ul, h1, h2, h3, h4, h5, h6, p, th, td, dl, dd, form, fieldset, legend, input, textarea, select, td, figure {
+  margin: 0;
+  padding: 0; }
+
+body {
+  font: 12px  "宋体";
+  word-wrap: break-word; }
+
+a, u, s, del {
+  color: #666;
+  text-decoration: none; }
+
+fieldset, a img, .bor0 {
+  border: 0; }
+
+i, em, b {
+  font-style: normal;
+  font-weight: 100; }
+
+li {
+  list-style: none; }
+
+img {
+  vertical-align: middle; }
+
+table {
+  border-collapse: collapse; }
+
+.ind2 {
+  text-indent: 2em; }
+
+input, textarea {
+  outline: none; }
+
+/*去除google表单点击虚框*/
+textarea {
+  resize: none; }
+
+.T-align {
+  text-align: center; }
+
+.T-align img {
+  vertical-align: middle; }
+
+/* 图片是行内块元素 把i元素变同类*/
+.T-over {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis; }
+
+.clear {
+  zoom: 1; }
+
+.clear:after {
+  content: "";
+  clear: both;
+  display: block; }
+
+/*高度塌陷*/
+.clear:before {
+  content: "";
+  display: table; }
+
+/*向上传递*/

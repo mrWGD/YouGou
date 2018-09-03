@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>优购时尚商城_用户注册</title>
+	
+	<link rel="stylesheet" href="css/Tstyle.css"/>
+	<link rel="stylesheet" href="css/registe.css"/>
+    
+    <script src = "js/require.js" defer async = "true" data-main = 'js/main'></script>
+    <script>
+    	window.onload = function() {
+    		var oPhonenum = document.getElementById('phonenum');
+
+    		var oUsername = document.getElementById('username');
+			var oPassword1 = document.getElementById('password1');
+			var oPassword2 = document.getElementById('password2');
+			var oP1 = document.getElementById('p1');
+			var oP2 = document.getElementById('p2');
+			var oP3 = document.getElementById('p3');
+			var oP4 = document.getElementById('p4');
+			var oSub = document.getElementById('sub');
+
+            
+			oPhonenum.onblur = function() {
+				//去除你输入的空格
+				var oValue = oPhonenum.value.replace(/ /g, '');
+				oPhonenum.value = oValue;
+				if(!/^1\d{10}$/.test(oValue)){
+					oP1.innerHTML = '请输入正确格式的手机号'; 
+					oP1.style.color = 'red';
+				}else{
+					oP1.innerHTML = ''; 
+				}
+			}
+			//拿到失去焦点，onblur
+			oUsername.onblur = function() {
+				//去除你输入的空格
+				var oValue = oUsername.value.replace(/ /g, '');
+				oUsername.value = oValue;
+				if(oValue.length < 6 || oValue.length >18){
+					oP2.innerHTML = '用户名长度设置 6-18 位'; 
+					oP2.style.color = 'red';
+				}else if(/_|\d/.test(oValue[0])){
+					oP2.innerHTML = '用户名请以字母开头';
+					oP2.style.color = 'red';
+
+					
+
+				}else if(/\W/.test(oValue)){
+					oP2.innerHTML = '只能包括字母,数字,下划线';
+					oP2.style.color = 'red';
+				}else{
+					oP2.innerHTML = '用户名正确';
+					oP2.style.color = '#000';
+
+				}
+			}
+
+			oPassword1.onblur = function() {
+			
+				var oValue =  oPassword1.value.replace(/ /g, '');
+				oPassword1.value = oValue;
+				if(oValue.length < 6 || oValue.length >25){
+					oP3.innerHTML = '密码长度设置 6-25 位'; 
+					oP3.style.color = 'red';
+				}else if(/\W/.test(oValue)){
+					oP3.innerHTML = '只能包括字母,数字,下划线';
+					oP3.style.color = 'red';
+				}else{
+					oP3.innerHTML = '密码正确';
+					oP3.style.color = '#000';
+
+				}
+			}
+			oPassword2.onblur = function() {
+			
+				var oValue =  oPassword2.value.replace(/ /g, '');
+				oPassword2.value = oValue;
+				if (oPassword2.value != oPassword1.value) {
+					
+					oP4.innerHTML = '两次输入的密码不一致';
+					oP4.style.color = 'red';
+				}else{
+					oP4.innerHTML = '';
+					
+				}
+			}
+   
+   
+    		function testcode(n) {
+				var arr = [];//在函数体内，每循环一次清空
+				for(i = 0;i < n; i++){
+					var num = parseInt(Math.random() * 10);
+					arr.push(num);
+				}
+				return arr.join("");
+			};
+
+       		var oBtn = document.getElementById('btn1');
+
+			oBtn.onclick = function(){
+			
+				oBtn.innerHTML= testcode(4);
+			};
+
+			oSub.onclick = function() {
+				document.write('注册成功');
+			}
+
+
+
+		}
+
+    </script>
+
+</head>
+<body>
+	<!--top部分-->
+	<div id = 'top'>
+		
+			<div class = 't-l'>
+				<a href="index.html" class = 'a1'>时尚商城</a>
+				<a href="" class = 'a2'>
+				<img src = "images/t3.png"/>
+				手机优购
+				<img src = "images/t2.png"/>
+				</a>
+				<img src = "images/app.jpg" class = 'img1'/>
+
+
+			</div>
+
+			<div class = 't-r'>
+				<a href="login.html" class = 'a3'>登录</a>
+				<a href="registe.html" class = 'a3'>注册</a>
+	            <span>|</span>
+				<a href="goodslist.html" class = 'a3'>
+				我的优购
+				
+				</a>
+				<a href="#">我的订单</a>
+				<a href="#" class = 'a5'>
+				公告
+				<img src = "images/t2.png"/>
+				</a>
+				<div class = 'notice'>
+					<a href="">关闭分享购频道</a>
+					<a href="">优购客服电话变更</a>
+					<a href="">提醒会员谨防诈骗电话</a>
+				</div>
+				
+
+
+			
+		</div>
+
+
+	</div>
+<!--head部分-->
+    <div id = 'head'>
+    
+    	<img src = "images/logo3.png"/>
+    	<h3>用户注册</h3>
+				
+    	
+    </div>
+
+
+    <div id = 'main'>
+        <div class = 'm-t'>
+        	<a href = "login.html" class = 'active'>登录</a>
+		    <a href = "registe.html">注册</a>
+
+        </div>
+        <div class = 'm-b'>
+           
+	            <span>手机号&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+	            <input id = 'phonenum' type = 'text' placeholder = "请输入您的手机号" />
+	            <p id = 'p1'> </p>
+	            <span>用户名&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+	            <input id = 'username' type = 'text' placeholder = "请输入用户名"  name = 'username' value = ''/>
+	            <p id = 'p2'>字母,数字,下划线均可,字母开头,6-18 位以内</p>
+
+	          
+	            <span>密码&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+	            <input id = 'password1'  type = 'password' placeholder = "请输入密码"  name = 'password1' value= ''/>
+	            <p id = 'p3'>字母,数字,下划线均可,6-25 位以内</p>
+	            <span>确认密码&nbsp;&nbsp;&nbsp;</span>
+	            <input id = 'password2'  type = 'password' placeholder = "请再次输入密码"  name = 'password2' value= ''/>
+	            <p id = 'p4'> </p>
+
+			    <span>验证码&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+	            <input type = 'text'  class = 'txt' />
+	            <button id = 'btn1'>6656</button><br/>
+	           
+	            <p>我已阅读并同意《优购会员注册协议》</p>
+			    <input id = 'sub' type = 'submit' value = "确认注册" class = 'sub'/>
+           
+        </div>
+																																																																		
+    </div>
+
+<!--footer部分-->
+    <div id = 'footer'>
+    	<div class = 'f-l'>
+    		<img src = "images/logo2.png">
+    	</div>
+    	<div class = 'f-r'>
+    	    <div class = 'a'>
+    	
+	    		<a href=""> 关于优购</a>
+	    		<span>|</span>
+	            <a href="">集团采购</a>
+	    		<span>|</span>
+	    		<a href="">招贤纳士</a>
+	    		<span>|</span>
+	    		<a href="">手机优购</a>
+	    		<span>|</span>
+	    		<a href="">联系我们</a>
+	    		<span>|</span>
+	    		<a href="">友情链接</a>
+    		</div>
+    		<p>Copyright © 2011-2016 Yougou Technology Co., Ltd. 粤ICP备09070608号-4 增值电信业务经营许可证： 粤 B2-20090203   深公网安备：4403101910665 粤公网安备 44030502000017号</p>
+    		<div class = 'img'>
+	    	    <img src = "images/t44.png">
+	    	    <img src = "images/t45.png">
+	    	    <img src = "images/t46.png">
+	    	    <img src = "images/t47.png">
+    	    </div>
+
+    	</div>
+    </div>
+
+</body>
+</html>
